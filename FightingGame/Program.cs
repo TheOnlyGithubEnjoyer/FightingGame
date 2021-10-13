@@ -14,25 +14,25 @@ name2 = Console.ReadLine();
 
 Console.WriteLine(name1 + "'s Health = " + HP1);
 Console.WriteLine(name2 + "'s Health = " + HP2);
-Console.WriteLine("PRESS SPACE TO KNOCK HIS ASS OUT!");
+Console.WriteLine("PRESS ENTER TO KNOCK HIM OUT!");
 
 Console.ReadLine();
 
 while (HP1 > 0 && HP2 > 0)
 {
 
-    Random generator = new Random();
+   Random generator = new Random();
 
-    int damage1 = generator.Next(8,20);
+    int damage1 = generator.Next(5,35);
 
-    int damage2 = generator.Next(8,20);
+    int damage2 = generator.Next(5,35);
 
     HP1 = HP1-damage2;
     HP2 = HP2-damage1;
 
-    Console.WriteLine(name1 + "'s Health: " + HP1 + "! " + name2 + " Did " + damage2 + " on yo stupid ass!");
+    Console.WriteLine(name1 + "'s Health: " + HP1 + "! " + name2 + " Did " + damage2 + " on yoU");
     Console.WriteLine(name2 + "'s Health: " + HP2 + "! " + name1 + " Did " + damage1 + " on you!");
-    Console.WriteLine("PRESS SPACE TO ATTACK");
+    Console.WriteLine("PRESS ENTER TO ATTACK");
     
 
     Console.ReadLine();
@@ -41,17 +41,17 @@ while (HP1 > 0 && HP2 > 0)
 
 if (HP1 < 0 && HP2 < 0)
 {
-    Console.WriteLine("Ohhh my! It's a fucking draw. What are the chances.");
+    Console.WriteLine("Ohhh my! It's a draw. What are the chances.");
 }
 
-else if(HP1 < 0 || HP1 == 0)
+else if(HP1 <= 0)
 {
-    Console.WriteLine(name2 + " has beaten " + name1 + " easily! " + "With only " + HP2 + "HP left");
+    Console.WriteLine(name2 + " has beaten " + name1 + " easily! " + "with only " + HP2 + "HP left");
 }
 
-else if(HP2 < 0 || HP2 == 0)
+else if(HP2 <= 0)
 {
-    Console.WriteLine(name1 + " has beaten " + name2 + " like a baby " + "With only " + HP1 + "HP left");
+    Console.WriteLine(name1 + " has beaten " + name2 + " like a baby " + "with only " + HP1 + "HP left");
 }
 
 Console.ReadLine();
